@@ -5,16 +5,9 @@ def main(page: ft.Page):
     def set_pantalla(e: ft.ControlEvent):
         cnt_principal.content = lst_pantallas[e.control.selected_index]
         cnt_principal.update()
-        
-    # Configuración de la página
-    page.fonts = {
-        'RobotoMono': 'font/RobotoMono-VariableFont_wght.ttf',
-        'RobotoSlab': 'font/RobotoSlab.ttf',
-        'Caecilia'  : 'font/CaeciliaLTStd-Roman.otf'
-    }
+
     page.title = 'Tutorial de programación avanzada en Flet'
     page.theme_mode = ft.ThemeMode.LIGHT
-    page.window.height = 850
 
     # Pantalla principal
     cnt_principal = ft.Container(content=ft.Text('Inicio'), expand=True)
@@ -82,6 +75,6 @@ def main(page: ft.Page):
     )
 
 if __name__ == '__main__':
-    ft.app(target=main) # view=ft.AppView.WEB_BROWSER
+    ft.app(target=main, view=ft.AppView.WEB_BROWSER)
     # view=None
     # web_renderer=ft.WebRenderer.HTML
