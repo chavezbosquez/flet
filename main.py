@@ -1,12 +1,11 @@
 import flet as ft
-from panel_inicio import  PanelInicio
+
 def main(page: ft.Page):
-    """ Pantalla principal """
 
     def set_pantalla(e: ft.ControlEvent):
         cnt_principal.content = lst_pantallas[e.control.selected_index]
         cnt_principal.update()
-
+        
     # Configuración de la página
     page.fonts = {
         'RobotoMono': 'font/RobotoMono-VariableFont_wght.ttf',
@@ -18,11 +17,10 @@ def main(page: ft.Page):
     page.window.height = 850
 
     # Pantalla principal
-    pnl_inicio = PanelInicio()
-    cnt_principal = ft.Container(content=pnl_inicio, expand=True)
+    cnt_principal = ft.Container(content=ft.Text('Inicio'), expand=True)
 
     lst_pantallas = [
-        pnl_inicio,
+        ft.Text('Inicio'),
         ft.Text('¿Ayuda?'),
     ]
 
