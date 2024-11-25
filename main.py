@@ -1,31 +1,11 @@
 import flet as ft
-from panel_inicio import PanelInicio
-from panel_ui import PanelUI
-from panel_config import PanelConfig
-from panel_bd import PanelBD
-from panel_nube import PanelNube
-
+from panel_inicio import  PanelInicio
 def main(page: ft.Page):
     """ Pantalla principal """
 
     def set_pantalla(e: ft.ControlEvent):
         cnt_principal.content = lst_pantallas[e.control.selected_index]
         cnt_principal.update()
-    '''
-    def set_pantalla(e: ft.ControlEvent):
-        # e.control.selected_index:
-        # 0=Intro, 1=
-        match e.control.selected_index:
-            case 0:
-                cnt_principal.content = pnl_inicio
-            case 1:
-                cnt_principal.content = PanelConfig()
-            case 2:
-                cnt_principal.content = PanelUI()
-            case 3:
-                cnt_principal.content = PanelBD()
-        cnt_principal.update()
-    '''
 
     # Configuración de la página
     page.fonts = {
@@ -43,10 +23,6 @@ def main(page: ft.Page):
 
     lst_pantallas = [
         pnl_inicio,
-        PanelConfig(),
-        PanelUI(),
-        PanelBD(),
-        PanelNube(),
         ft.Text('¿Ayuda?'),
     ]
 
