@@ -1,9 +1,9 @@
 import flet as ft
 from panel_inicio import PanelInicio
-from panel_ui import PanelUI
-from panel_config import PanelConfig
-from panel_bd import PanelBD
-from panel_nube import PanelNube
+#from panel_ui import PanelUI
+#from panel_config import PanelConfig
+#from panel_bd import PanelBD
+#from panel_nube import PanelNube
 
 def main(page: ft.Page):
     """ Pantalla principal """
@@ -43,10 +43,14 @@ def main(page: ft.Page):
 
     lst_pantallas = [
         pnl_inicio,
-        PanelConfig(),
-        PanelUI(),
-        PanelBD(),
-        PanelNube(),
+        #PanelConfig(),
+        ft.Text('Config'),
+        #PanelUI(),
+        ft.Text('UI'),
+        #PanelBD(),
+        ft.Text('BD'),
+        #PanelNube(),
+        ft.Text('Nube'),
         ft.Text('¿Ayuda?'),
     ]
 
@@ -108,6 +112,6 @@ def main(page: ft.Page):
     )
 
 if __name__ == '__main__':
-    ft.app(target=main, view=ft.AppView.WEB_BROWSER) # 
+    ft.app(target=main, view=ft.AppView.WEB_BROWSER) #
     # view=None
     # web_renderer=ft.WebRenderer.HTML
