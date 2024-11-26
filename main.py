@@ -1,5 +1,5 @@
 import flet as ft
-from panel_inicio import PanelInicio
+#from panel_inicio import PanelInicio
 #from panel_ui import PanelUI
 #from panel_config import PanelConfig
 #from panel_bd import PanelBD
@@ -38,7 +38,7 @@ def main(page: ft.Page):
     page.window.height = 850
 
     # Pantalla principal
-    pnl_inicio = PanelInicio()
+    pnl_inicio = ft.Text('Inicio')#,PanelInicio()
     cnt_principal = ft.Container(content=pnl_inicio, expand=True)
 
     lst_pantallas = [
@@ -112,6 +112,6 @@ def main(page: ft.Page):
     )
 
 if __name__ == '__main__':
-    ft.app(target=main, view=ft.AppView.WEB_BROWSER) #
+    ft.app(target=main, view=ft.AppView.WEB_BROWSER)
     # view=None
     # web_renderer=ft.WebRenderer.HTML
