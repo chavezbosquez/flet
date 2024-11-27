@@ -8,7 +8,7 @@ class PanelConfig(ft.Pagelet):
         self.padding = 20
 
         self.appbar = ft.AppBar(
-            leading=ft.Icon(icono),
+            leading=ft.Icon(ft.icons.SETTINGS),
             title=ft.Text(texto, size=26),
             bgcolor=ft.colors.GREEN_200
         )
