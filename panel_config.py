@@ -8,6 +8,7 @@ class PanelConfig(ft.Pagelet):
         self.padding = 20
         self.appbar = cm.crear_appbar(ft.icons.SETTINGS, 'Configuración y puesta a punto')
 
+        '''
         mkd_texto = cm.crear_texto_markdown_formateado('assets/config.md', self)
 
         self.content=ft.Row(
@@ -18,6 +19,7 @@ class PanelConfig(ft.Pagelet):
                     expand=True)
             ]
         )
+        '''
 
 if __name__ == '__main__':
 
