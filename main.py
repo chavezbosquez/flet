@@ -1,5 +1,6 @@
 import flet as ft
 from panel_inicio import PanelInicio
+from panel_config import PanelConfig
 
 def main(page: ft.Page):
 
@@ -16,7 +17,7 @@ def main(page: ft.Page):
 
     lst_pantallas = [
         pnl_inicio,
-        ft.Text('Configuración'),
+        PanelConfig(),
         ft.Text('UI'),
         ft.Text('Base de datos'),
         ft.Text('En la nube'),
