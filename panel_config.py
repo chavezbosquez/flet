@@ -1,14 +1,16 @@
 import flet as ft
-import componentes as cm
+#import componentes as cm
 
 class PanelConfig(ft.Pagelet):
 
     def __init__(self):
         super().__init__(self)
         self.padding = 20
-        self.appbar = cm.crear_appbar(ft.icons.SETTINGS, 'Configuración y puesta a punto')
 
+        self.content=ft.Text('PanelConfig vacío')
         '''
+        self.appbar = cm.crear_appbar(ft.icons.SETTINGS, 'Configuración y puesta a punto')
+        
         mkd_texto = cm.crear_texto_markdown_formateado('assets/config.md', self)
 
         self.content=ft.Row(
