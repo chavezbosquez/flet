@@ -30,10 +30,11 @@ def main(page: ft.Page):
     page.theme_mode = ft.ThemeMode.LIGHT
 
     # Pantalla principal
-    cnt_principal = ft.Container(content=PanelInicio(), expand=True)
+    pnl_inicio = PanelInicio()
+    cnt_principal = ft.Container(content=pnl_inicio, expand=True)
 
     lst_pantallas = [
-        ft.Text('Inicio'),
+        pnl_inicio,
         ft.Text('Configuración'),
         ft.Text('UI'),
         ft.Text('Base de datos'),
