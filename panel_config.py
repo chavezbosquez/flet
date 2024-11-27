@@ -1,5 +1,5 @@
 import flet as ft
-#import componentes as cm
+import componentes as cm
 
 class PanelConfig(ft.Pagelet):
 
@@ -7,7 +7,7 @@ class PanelConfig(ft.Pagelet):
         super().__init__(self)
         self.padding = 20
 
-        self.content=ft.Text('PanelConfig vacío')
+        self.content=ft.Text('PanelConfig con: import componentes as cm')
         '''
         self.appbar = cm.crear_appbar(ft.icons.SETTINGS, 'Configuración y puesta a punto')
         
