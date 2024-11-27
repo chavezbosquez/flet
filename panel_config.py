@@ -9,10 +9,10 @@ class PanelConfig(ft.Pagelet):
 
         self.appbar = ft.AppBar(
             leading=ft.Icon(ft.icons.SETTINGS),
-            title=ft.Text(texto, size=26),
+            title=ft.Text('Configuración', size=26),
             bgcolor=ft.colors.GREEN_200
         )
-        self.content=ft.Text('PanelConfig con: import componentes as cm')
+        self.content=ft.Text('PanelConfig dentro del main')
         
         '''
         mkd_texto = cm.crear_texto_markdown_formateado('assets/config.md', self)
